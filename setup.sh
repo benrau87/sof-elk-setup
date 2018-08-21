@@ -1,5 +1,6 @@
 #!/bin/bash
-
+cp bulk_import.sh /home/elk_user/
+chmod +x /home/elk_user/bulk_import.sh
 yum install samba samba-client samba-common git
 pip install evtxtoelk
 mkdir /logstash/hostlogs
