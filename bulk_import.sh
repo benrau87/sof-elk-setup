@@ -1,7 +1,6 @@
 #!/bin/bash
 
-for log in /logstash/hostlogs/*; do
-  python /home/elk_user/evtxtoelk.py $log
-    echo "Adding $log to ES"
-  fi
+for evtlog in $(find /logstash/hostlogs/ -name  "*.evtx"); do
+  python /home/elk_user/evtxtoelk/evtxtoelk.py $evtlog 127.0.0.1:9200
+  echo "Adding $evtlog to ES"
 done
