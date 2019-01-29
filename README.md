@@ -5,7 +5,7 @@ https://github.com/philhagen/sof-elk/blob/master/VM_README.md
 
 Running setup.sh will do the following:
 
-Adds (anonymous) SMB access to input folders and the ability to index evtx files under the hostlog folder.
+Adds (anonymous) SMB access to input folders \\<IP>\logstash and the ability to index evtx files under the hostlog folder.
 
 Create a hostlogs folder for storage of evtx files
 
