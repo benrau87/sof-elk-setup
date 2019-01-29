@@ -21,6 +21,9 @@ echo "browsable =yes" >> /etc/samba/smb.conf
 echo "writable = yes" >> /etc/samba/smb.conf
 echo "guest ok = yes" >> /etc/samba/smb.conf
 echo "read only = no" >> /etc/samba/smb.conf
+
+firewall-cmd --permanent --zone=public --add-service=samba
+firewall-cmd --reload
 systemctl enable smb.service
 systemctl enable nmb.service
 systemctl start smb.service
