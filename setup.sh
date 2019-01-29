@@ -3,8 +3,8 @@ cp bulk_import.sh /home/elk_user/
 chmod +x /home/elk_user/bulk_import.sh
 yum install samba samba-client samba-common git
 pip install evtxtoelk
-mkdir /logstash/hostlogs
-chmod 777 /logstash/hostlogs
+mkdir /logstash/eventlogs
+chmod 777 /logstash/eventlogs
 cp -pf /etc/samba/smb.conf /etc/samba/smb.conf.bak
 cat /dev/null > /etc/samba/smb.conf
 
