@@ -21,6 +21,10 @@ echo "browsable =yes" >> /etc/samba/smb.conf
 echo "writable = yes" >> /etc/samba/smb.conf
 echo "guest ok = yes" >> /etc/samba/smb.conf
 echo "read only = no" >> /etc/samba/smb.conf
+systemctl enable smb.service
+systemctl enable nmb.service
+systemctl start smb.service
+systemctl start nmb.service
 
 cd /home/elk_user
 git clone https://github.com/dgunter/evtxtoelk
