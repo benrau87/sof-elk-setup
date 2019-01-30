@@ -5,6 +5,7 @@
 /usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-user-agent -s
 
 #Update
+yum install nano -y
 sof-elk_update.sh
  
 #Added IIS grok
