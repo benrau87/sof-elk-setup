@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit 1
+fi
+
 #New plugins
 /usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-geoip -s
 /usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-user-agent -s
