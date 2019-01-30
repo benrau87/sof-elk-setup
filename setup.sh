@@ -1,4 +1,16 @@
 #!/bin/bash
+
+#New plugins
+/usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-geoip -s
+/usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-user-agent -s
+
+#Update
+sof-elk_update.sh
+ 
+#Added IIS grok
+cp 6100-httpd.conf /usr/local/sof-elk/configfiles/
+
+#Evtx local log support
 cp bulk_import.sh /home/elk_user/
 chmod +x /home/elk_user/bulk_import.sh
 yum install samba samba-client samba-common git
