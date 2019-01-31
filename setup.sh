@@ -15,6 +15,7 @@ sof-elk_update.sh
  
 #Added IIS grok
 cp 6100-httpd.conf /usr/local/sof-elk/configfiles/
+cp 1010-preproccess-comments.conf /usr/local/sof-elk/configfiles/
 
 #Evtx local log support
 cp bulk_import.sh /home/elk_user/
