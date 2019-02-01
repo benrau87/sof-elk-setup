@@ -7,6 +7,8 @@ Running setup.sh will do the following:
 
 Adds (anonymous) SMB access to input folders \\<IP>\logstash and the ability to index evtx files under the hostlog folder.
 
+Add grok rules adn timestamp for various IIS log types processed under httpd
+
 Create a hostlogs folder for storage of evtx files
 
 Download and install the evtx to elk utilities
