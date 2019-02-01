@@ -13,12 +13,11 @@ fi
 yum install nano -y
 sof-elk_update.sh
  
-#Added IIS grok
+#Added IIS grok and comments filter
+cp 1000-preprocess-all.conf /usr/local/sof-elk/configfiles/
 cp 6100-httpd.conf /usr/local/sof-elk/configfiles/
-
-cp 1010-preproccess-comments.conf /usr/local/sof-elk/configfiles/1000-preprocess-all.conf
 chmod 644 /usr/local/sof-elk/configfiles/1000-preprocess-all.conf 
-#ln -s /usr/local/sof-elk/configfiles/1010-preproccess-comments.conf /etc/logstash/conf.d
+chmod 644 /usr/local/sof-elk/configfiles/6100-httpd.conf 
 
 #Evtx local log support
 cp bulk_import.sh /home/elk_user/
