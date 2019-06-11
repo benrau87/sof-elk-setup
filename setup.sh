@@ -6,8 +6,8 @@ if [ "$EUID" -ne 0 ]
 fi
 
 #New plugins
-/usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-geoip -s
-/usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-user-agent -s
+#/usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-geoip -s
+#/usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-user-agent -s
 
 #Update
 yum install nano -y
